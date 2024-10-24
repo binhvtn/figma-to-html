@@ -1,0 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+/* Thông thường 1rem = 16px, tuy nhiên đổi như vậy thì lẻ nên sử dụng mẹo sau để 1rem = 10px*/
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
