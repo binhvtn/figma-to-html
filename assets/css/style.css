@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 /* Thông thường 1rem = 16px, tuy nhiên đổi như vậy thì lẻ nên sử dụng mẹo sau để 1rem = 10px*/
+:root {
+  --font-heading: "Sen", sans-serif;
+  --primary-color: #ffb900;
+}
 html {
   font-size: 62.5%;
 }
@@ -22,18 +26,22 @@ a {
 .btn {
   background-color: #171100;
   color: #fff;
-  border-radius: 24.5px;
+  border-radius: 999px;
   display: inline-block;
   padding: 0px 16px;
   line-height: 50px;
   min-width: 118px;
   text-align: center;
 }
+.btn:hover {
+  opacity: 0.9;
+}
 /* ==========header============== */
 .header {
-  background-color: #eec6e9;
+  background-color: #fffcf4;
 }
 .header.fixed {
+  z-index: 1;
   position: sticky;
   top: -28px;
 }
@@ -57,7 +65,7 @@ a {
 .nav li.active a,
 .nav a:hover {
   color: #171100;
-  font-weight: 600;
+  /* font-weight: 600; */
   text-shadow: 1px 0 0 currentColor;
 }
 .nav li.active a::after {
@@ -76,4 +84,134 @@ a {
 }
 .header .action {
   margin-left: 49px;
+}
+/* ==========hero============== */
+.hero {
+  padding: 56px 0 0 65px;
+  background: #fffcf4;
+}
+.hero .body {
+  display: flex;
+}
+/* =================hero left============ */
+.hero .media-block {
+  width: 48%;
+  position: relative;
+}
+.hero .media-block .img {
+  width: 470px;
+  height: 685px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.hero .hero-sumary {
+  position: absolute;
+  bottom: 48px;
+  right: 0;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+  width: 270px;
+  padding: 24px;
+}
+.hero-sumary .item {
+  display: flex;
+  align-items: center;
+}
+.hero-sumary .icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-sumary .info {
+  margin-left: 16px;
+}
+.hero-sumary .label {
+  color: #5f5b53;
+  font-size: 1.4rem;
+  line-height: 1.86; /* 186% */
+}
+.hero-sumary .title {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67;
+}
+.hero-sumary .item + .item {
+  margin-top: 22px;
+}
+/* =================hero right============ */
+.hero .content-block {
+  width: 52%;
+  padding-left: 130px;
+  padding-top: 64px;
+}
+.hero .heading {
+  color: #171100;
+  font-family: var(--font-heading);
+  font-size: 5.8rem;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: -1.16px;
+}
+.hero .desc {
+  color: #5f5b53;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  margin-top: 22px;
+}
+.hero .cta-group {
+  margin-top: 38px;
+  display: flex;
+  align-items: center;
+}
+.hero .hero-cta {
+  min-width: 180px;
+  line-height: 64px;
+  background-color: var(--primary-color);
+}
+.hero .watch-video {
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  margin-left: 28px;
+  cursor: pointer;
+}
+.hero .watch-video .icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero .watch-video span {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67;
+  margin-left: 14px;
+}
+.hero .desc-recent {
+  margin-top: 48px;
+}
+.hero .stats {
+  margin-top: 8px;
+}
+.hero .stats strong {
+  margin-right: 15px;
+  color: #171100;
+  font-family: var(--font-heading);
+  font-size: 4.4rem;
+  font-weight: 700;
+  line-height: 1.23;
+}
+.hero .stats strong:nth-child(2) {
+  margin-left: 28px;
 }
