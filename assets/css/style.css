@@ -300,7 +300,7 @@ a {
 .popular .course-item .info .head .rating .value {
   margin-left: 6px;
   font-size: 16px;
-  line-height: 1.75;
+  padding-top: 4px;
 }
 .popular .course-item .desc {
   margin-top: 6px;
