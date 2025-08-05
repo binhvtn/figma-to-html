@@ -67,7 +67,11 @@ a {
 .header {
   background-color: #fffcf4;
 }
-.header.fixed {z-index: 1; position: sticky; top: -28px;}
+.header.fixed {
+  z-index: 1;
+  position: sticky;
+  top: -28px;
+}
 .header .body {
   display: flex;
   align-items: center;
